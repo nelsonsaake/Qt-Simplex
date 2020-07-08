@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MessageDialog</class>
+ <widget class="QDialog" name="MessageDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>407</width>
+    <height>308</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QScrollBar:vertical{
+	width: 4px; 
+}
+
+QScrollBar:horizontal{
+	height: 4px; 
+}
+
+QScrollBar:horizontal,
+QScrollBar:vertical{
+	background: rgba(0,0,0,0);
+}
+
+QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:horizontal,
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal,
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::sub-page:vertical,
+QScrollBar::add-page:vertical{
+	background: none;
+}
+
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal{
+	background: rgb(255,250,250);
+}
+
+
+/**/
+QWidget{
+	font-size: 12pt;
+}
+
+[objectName^=&quot;inputLabel_&quot;], 
+[objectName = &quot;appLabel&quot;], 
+QWidget,
+QPushButton, 
+QLineEdit,
+QComboBox{
+	font-family: &quot;Monotype Corsiva&quot;;
+}
+
+[objectName=&quot;navBar&quot;]{
+	padding: 15px;
+	margin: 5px;
+}
+
+QTableWidget, QScrollArea, QGroupBox{
+	border: 0;
+}
+
+[objectName = &quot;appLabel&quot;]{
+	padding: 50px 0;
+}
+
+QPushButton{
+	padding: 10px 15px;
+	margin: 5px;
+	min-width: 200px;
+}
+
+QLineEdit{
+	margin: 5px;
+}
+
+QPushButton:hover{
+	text-decoration: underline;
+}
+
+QPushButton:pressed{
+	font-size: 11px;
+	font-weight: bold;
+}
+
+[objectName^=&quot;inputLabel_&quot;]{
+	margin: 5px 0;
+	font-size: 24pt;
+}
+
+/*tab widget setup*/
+QTabWidget{
+	border: 0;
+}
+
+QTabWidget::pane { 
+    position: absolute;
+    top: 0.5em;
+	border: 0;
+}
+
+QTabBar::tab {
+	min-width: 150px;
+}
+
+/*default color theme*/
+
+/*color*/
+QTabBar::tab:selected {
+	color: white;
+}
+
+QTabBar::tab:!selected {
+	color: silver;
+}
+
+QWidget[objectName=&quot;widget_5&quot;] QPushButton,
+QWidget[objectName=&quot;widget&quot;] QPushButton{
+	color: rgb(250,245,245);
+}
+
+[objectName^=&quot;inputLabel_&quot;], 
+[objectName = &quot;appLabel&quot;], 
+QWidget,
+QPushButton, 
+QLineEdit,
+QComboBox{
+	color: white;
+}
+
+QWidget[objectName^=&quot;widget&quot;] QPushButton{
+	color: white;
+}
+/*background-color*/
+QWidget, 
+QTabBar::tab{
+	background-color: rgba(0,0,0,0);
+}
+
+QWidget[objectName^=&quot;widget&quot;],
+Line{
+	background-color: rgba(0,0,0,0.2);
+}
+
+[objectName=&quot;centralWidget&quot;], [objectName=&quot;MessageDialog&quot;]{
+	background-color: rgb(250,245,245);
+	background: url(:/img/background.PNG);
+}
+
+[objectName^=&quot;widget&quot;] QPushButton{
+	background-color: rgba(255,255,255,0.2);
+}
+
+QTabBar::tab:selected, 
+QTabBar::tab:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+
+/*border*/
+[objectName=&quot;navBar&quot;], 
+[objectName^=&quot;widget&quot;],
+QPushButton,
+QLineEdit, 
+QTableWidget::item{
+	border: 1px solid silver;
+}
+
+QLineEdit:hover,
+[objectName^=&quot;widget&quot;]:hover,
+QPushButton:hover{
+	border: 1px solid white;
+}
+
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Ok</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MessageDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
